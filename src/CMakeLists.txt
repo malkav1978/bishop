@@ -10,9 +10,11 @@ target_include_directories(
 target_sources(
 	bishop
 	PRIVATE
+	label.cpp
 	metric.cpp
 	counter.cpp
 	PUBLIC
+	${CMAKE_SOURCE_DIR}/include/prometheus/label.hpp
 	${CMAKE_SOURCE_DIR}/include/prometheus/metric.hpp
 	${CMAKE_SOURCE_DIR}/include/prometheus/counter.hpp
 )

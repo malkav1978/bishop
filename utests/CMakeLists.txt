@@ -13,6 +13,7 @@ target_include_directories(
 target_sources(
 	utests
 	PRIVATE
+	utest_label.cpp
 	utest_counter.cpp
 )
 
