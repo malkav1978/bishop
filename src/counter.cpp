@@ -26,12 +26,12 @@ namespace prometheus
 	}
 
 	/**
-	 * @brief Increments the counter by the specified amount.
+	 * @brief Increments the counter by the specified amount (default is 1).
 	 *
 	 * @param amount The amount to increment the counter by. Must be non-negative.
 	 * @throws std::invalid_argument if the amount is negative.
 	 */
-	void Counter::observe(double amount)
+	void Counter::inc(double amount)
 	{
 		if(amount >= 0)
 		{
