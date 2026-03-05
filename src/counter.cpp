@@ -1,15 +1,9 @@
-#include "prometheus/metric.hpp"
 #include "prometheus/counter.hpp"
 
 #include <stdexcept>
 
 namespace prometheus
 {
-	Counter::Counter(const std::string& name, const std::string& description)
-		: Metric(name, description)
-	{
-	}
-
 	void Counter::inc(double amount)
 	{
 		if(amount < 0)

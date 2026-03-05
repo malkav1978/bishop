@@ -10,9 +10,7 @@ target_include_directories(
 target_sources(
 	bishop
 	PRIVATE
-	metric.cpp
 	counter.cpp
 	PUBLIC
-	${CMAKE_SOURCE_DIR}/include/prometheus/metric.hpp
 	${CMAKE_SOURCE_DIR}/include/prometheus/counter.hpp
 )
