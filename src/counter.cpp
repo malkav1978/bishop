@@ -4,13 +4,34 @@
 
 namespace prometheus
 {
+	//! @brief Pre-increment operator.
+	Counter& Counter::operator++()
+	{
+		this->inc();
+		return *this;
+	}
+
+	//! @brief Post-increment operator.
+	Counter Counter::operator++(int)
+	{
+		this->inc();
+		return *this;
+	}
+
+	//! @brief Compound assignment operator.
+	Counter& Counter::operator+=(double amount)
+	{
+		this->inc(amount);
+		return *this;
+	}
+
 	/**
-	 * @brief Increments the counter by the specified amount. The default increment is 1.
+	 * @brief Increments the counter by the specified amount.
 	 *
 	 * @param amount The amount to increment the counter by. Must be non-negative.
 	 * @throws std::invalid_argument if the amount is negative.
 	 */
-	void Counter::inc(double amount)
+	void Counter::observe(double amount)
 	{
 		if(amount >= 0)
 		{
