@@ -14,6 +14,7 @@ target_sources(
 	utests
 	PRIVATE
 	utest_counter.cpp
+	utest_gauge.cpp
 )
 
 target_link_libraries(utests GTest::gtest_main Prometheus::bishop)

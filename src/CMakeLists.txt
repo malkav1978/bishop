@@ -11,6 +11,8 @@ target_sources(
 	bishop
 	PRIVATE
 	counter.cpp
+	gauge.cpp
 	PUBLIC
 	${CMAKE_SOURCE_DIR}/include/prometheus/counter.hpp
+	${CMAKE_SOURCE_DIR}/include/prometheus/gauge.hpp
 )
