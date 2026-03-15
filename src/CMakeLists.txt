@@ -12,7 +12,10 @@ target_sources(
 	PRIVATE
 	counter.cpp
 	gauge.cpp
+	histogram.cpp
 	PUBLIC
+	${CMAKE_SOURCE_DIR}/include/prometheus/type.hpp
 	${CMAKE_SOURCE_DIR}/include/prometheus/counter.hpp
 	${CMAKE_SOURCE_DIR}/include/prometheus/gauge.hpp
+	${CMAKE_SOURCE_DIR}/include/prometheus/histogram.hpp
 )
