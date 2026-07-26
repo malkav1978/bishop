@@ -1,5 +1,8 @@
 # Ignored directories
+.cache/
 build/
+tmp/
 
 # Ignored file extensions
+*.bak
 *.code-workspace
